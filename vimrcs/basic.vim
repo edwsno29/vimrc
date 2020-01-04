@@ -321,7 +321,7 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-" YiXiong fix
+" JoeYi fix
 " map <leader>q :e ~/buffer<cr>
 map <leader>q :e ~/Documents/buffer.md<cr>
 
