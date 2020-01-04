@@ -13,12 +13,14 @@ if has("mac") || has("macunix")
     set gfn=IBM\ Plex\ Mono:h14,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
     set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
-elseif has("gui_gtk2")
-    set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+elseif has("gui_gtk2") || has("gui_gtk3")
+    " set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+    set gfn=Hack\ Regular\ 16,Monospace\ Regular\ 18,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
 elseif has("linux")
-    set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+    " set gfn=IBM\ Plex\ Mono:h14,:Hack\ Regular\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+    set gfn=Hack\ Regular\ 20,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
 elseif has("unix")
-    set gfn=Monospace\ 11
+    set gfn=Hack\ Regular\ 20,Monospace\ 11 
 endif
 
 " Disable scrollbars (real hackers don't use scrollbars for navigation!)
@@ -99,7 +101,10 @@ inoremap $e ""<esc>i
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+" 2019/07/08 17:14:56 
+iab xdate <c-r>=strftime("%Y/%m/%d %H:%M:%S")<cr>
+" Mon, Jul 8,2019 
+iab ydate <c-r>=strftime("%a, %b %e,%Y")<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

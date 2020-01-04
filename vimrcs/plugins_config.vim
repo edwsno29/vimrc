@@ -157,9 +157,9 @@ let g:go_fmt_command = "goimports"
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['jshint'],
+\   'javascript': [ 'eslint','jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'golint', 'errcheck'],
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -171,9 +171,20 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YiXiong add start
+" => vdebug (+ xdebug + (neo)vim debug php)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vdebug_options = {}
+let g:vdebug_options['path_maps'] = {
+\  '/home/vagrant/PathTo' : '/home/name/PathTo',
+\}
+let g:vdebug_options['port'] = 9000
+" let g:vdebug_options['server'] = "10.0.2.15"
